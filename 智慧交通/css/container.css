@@ -1,0 +1,10 @@
+/* container */
+.container{float: left;height: 100%;width: 85%;}
+
+/* heatmap */
+#heatmap{float: left;height: 100%;width: 100%;}
+
+/* trip */
+#tripmode{float: left;height: 100%;width: 100%;overflow: hidden;}
+
+.container-mini.container{width: 96%;}

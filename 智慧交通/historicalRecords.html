@@ -1,0 +1,62 @@
+<!--
+ * @Author: BB
+ * @Date: 2020-02-21 15:30:02
+ * @LastEditTime: 2020-09-15 16:05:28
+ * @LastEditors: Please set LastEditors
+ * @Description: 展示实时热力图
+ * @FilePath: \智慧交通\index.html
+-->
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>交通时空大数据挖掘系统</title>
+
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+	<link rel="stylesheet" href="css/container.css">
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/nav.js"></script>
+	<script src="https://webapi.amap.com/maps?v=1.4.15&key=348ffefbc160425d4b8b0a10782934a4"></script>
+	<script src="https://webapi.amap.com/loca?key=348ffefbc160425d4b8b0a10782934a4&v=1.3.0"></script> 
+</head>
+<body>
+    <div class="nav">
+	<div class="nav-top">
+		<div id="mini" style="border-bottom:1px solid rgba(255,255,255,.1)"><img src="images/mini.png" ></div>
+	</div>
+	<ul>
+		<li class="nav-item">
+			<a href="javascript:;"><i class="my-icon nav-icon icon_1"></i><span>热力分析</span><i class="my-icon nav-more"></i></a>
+			<ul>
+				<li><a href="heatshow.html"><span>热力展示</span></a></li>
+				<li><a href="historicalRecords.html"><span>历史记录</span></a></li>
+			</ul>
+		</li>
+		<li class="nav-item">
+			<a href="javascript:;"><i class="my-icon nav-icon icon_2"></i><span>出行分析</span><i class="my-icon nav-more"></i></a>
+			<ul>
+				<li><a href="tripmode.html"><span>出行方式</span></a></li>
+				<li><a href="tripdistance.html"><span>出行距离</span></a></li>
+				<li><a href="tripduration.html"><span>出行时长</span></a></li>
+			</ul>
+		</li>
+		<li class="nav-item">
+			<a href="javascript:;"><i class="my-icon nav-icon icon_3"></i><span>驻留分析</span><i class="my-icon nav-more"></i></a>
+			<ul>
+				<li><a href="javascript:;"><span>居住人口</span></a></li>
+				<li><a href="javascript:;"><span>工作人口</span></a></li>
+				<li><a href="javascript:;"><span>娱乐人口</span></a></li>
+			</ul>
+		</li>
+	</ul>
+    </div>
+	<div class="container">
+		<div id="heatmap" class="heatmap-hide"></div>
+	</div>
+<script src="js/hisRecord.js"></script>
+</body>
+</html>
+

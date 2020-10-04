@@ -1,0 +1,69 @@
+<!--
+ * @Author: BB
+ * @Date: 2020-08-16 08:00:20
+ * @LastEditTime: 2020-09-15 16:05:49
+ * @LastEditors: Please set LastEditors
+ * @Description: 展示数据可视化界面
+ * @FilePath: \智慧交通\2.html
+-->
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>交通时空大数据挖掘系统</title>
+
+    <!-- 样式引入 -->
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+	<link rel="stylesheet" href="css/container.css">
+
+    <!-- API引入 -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/nav.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=tcsxnGwfTzmZZ0Zy59lFpBGcR61wiSt7"></script>
+    <script src="JS/echarts.min.js"></script>
+</head>
+<body>
+    <!-- 侧边栏菜单 -->
+    <div class="nav">
+	<div class="nav-top">
+		<div id="mini" style="border-bottom:1px solid rgba(255,255,255,.1)"><img src="images/mini.png" ></div>
+	</div>
+	<ul>
+		<li class="nav-item">
+			<a href="javascript:;"><i class="my-icon nav-icon icon_1"></i><span>热力分析</span><i class="my-icon nav-more"></i></a>
+			<ul>
+				<li><a href="heatshow.html"><span>热力展示</span></a></li>
+				<li><a href="historicalRecords.html"><span>历史记录</span></a></li>
+			</ul>
+		</li>
+		<li class="nav-item">
+			<a href="javascript:;"><i class="my-icon nav-icon icon_2"></i><span>出行分析</span><i class="my-icon nav-more"></i></a>
+			<ul>
+				<li><a href="tripmode.html"><span>出行方式</span></a></li>
+				<li><a href="tripdistance.html"><span>出行距离</span></a></li>
+				<li><a href="tripduration.html"><span>出行时长</span></a></li>
+			</ul>
+		</li>
+		<li class="nav-item">
+			<a href="javascript:;"><i class="my-icon nav-icon icon_3"></i><span>驻留分析</span><i class="my-icon nav-more"></i></a>
+			<ul>
+				<li><a href="javascript:;"><span>居住人口</span></a></li>
+				<li><a href="javascript:;"><span>工作人口</span></a></li>
+				<li><a href="javascript:;"><span>娱乐人口</span></a></li>
+			</ul>
+		</li>
+	</ul>
+    </div>
+    <!-- 展示区容器 -->
+	<div class="container">
+		<div id="tripmode"></div>
+	</div>
+
+
+<!-- <script src="js/tripmode.js"></script> -->
+<script src="js/tripMode.js"></script>
+</body>
+</html>
+
