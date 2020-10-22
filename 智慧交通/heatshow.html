@@ -15,11 +15,12 @@
 
     <link rel="stylesheet" type="text/css" href="css/nav.css">
     <link rel="stylesheet" type="text/css" href="font/iconfont.css">
-	<link rel="stylesheet" href="css/container.css">
+    <link rel="stylesheet" href="css/container.css">
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css"/>
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/nav.js"></script>
-    <script src="https://webapi.amap.com/maps?v=1.4.15&key=348ffefbc160425d4b8b0a10782934a4"></script>
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=348ffefbc160425d4b8b0a10782934a4&plugin=AMap.DistrictSearch"></script>
     <script src="https://webapi.amap.com/loca?key=348ffefbc160425d4b8b0a10782934a4&v=1.3.0"></script>    
 </head>
 <body>
@@ -53,8 +54,27 @@
 		</li>
 	</ul>
     </div>
-	<div class="container">
-		<div id="heatmap"></div>
+	<div class="content">
+    <div id="heatmap"></div>
+    <div class="input-card">
+      <h4>下属行政区查询</h4>
+      <div class="input-item">
+          <div class="input-item-prepend"><span class="input-item-text" >省市区</span></div>
+          <select id='province' style="width:100px" onchange='search(this)'></select>
+      </div>
+      <div class="input-item">
+          <div class="input-item-prepend"><span class="input-item-text" >地级市</span></div>
+          <select id='city' style="width:100px" onchange='search(this)'></select>
+      </div>
+      <div class="input-item">
+          <div class="input-item-prepend"><span class="input-item-text" >区县</span></div>
+          <select id='district' style="width:100px" onchange='search(this)'></select>
+      </div>
+      <div class="input-item">
+          <div class="input-item-prepend"><span class="input-item-text" >街道</span></div>
+          <select id='street' style="width:100px" onchange='setCenter(this)'></select>
+      </div>
+    </div>
 	</div>
 <script src="JS/heatshow.js"></script>
 </body>

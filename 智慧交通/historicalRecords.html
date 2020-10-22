@@ -15,12 +15,19 @@
 
     <link rel="stylesheet" type="text/css" href="css/nav.css">
     <link rel="stylesheet" type="text/css" href="font/iconfont.css">
-	<link rel="stylesheet" href="css/container.css">
-
+    <link rel="stylesheet" href="css/container.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/historical.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-datetimepicker.min.css">
+    
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/nav.js"></script>
-	<script src="https://webapi.amap.com/maps?v=1.4.15&key=348ffefbc160425d4b8b0a10782934a4"></script>
-	<script src="https://webapi.amap.com/loca?key=348ffefbc160425d4b8b0a10782934a4&v=1.3.0"></script> 
+	  <script src="https://webapi.amap.com/maps?v=1.4.15&key=348ffefbc160425d4b8b0a10782934a4&plugin=AMap.Autocomplete,AMap.PlaceSearch"></script>
+    <script src="https://webapi.amap.com/loca?key=348ffefbc160425d4b8b0a10782934a4&v=1.3.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/bootstrap/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/bootstrap/bootstrap-datetimepicker.zh-CN.js"></script>
+ 
 </head>
 <body>
     <div class="nav">
@@ -53,8 +60,65 @@
 		</li>
 	</ul>
     </div>
-	<div class="container">
-		<div id="heatmap" class="heatmap-hide"></div>
+	<div class="content">
+    <div id="heatmap" class="heatmap-hide"></div>
+    <!-- 提交表单 -->
+    <form action="" method="POST">
+      <!-- 条件筛选框 -->
+      <div class="panel panel-default">
+        <div class="fontbox">
+          <p>条件筛选框</p>
+        </div>
+        <!-- 地区筛选 -->
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1">地区</span>
+          <!-- 地区输入 -->
+          <input type="text" id="tipinput" class="form-control" placeholder="请选择地区" aria-describedby="basic-addon1">
+        </div>
+        <!-- 时间筛选 -->
+        <div class="form-group">
+          <label for="dtp_input" class="col-md-1 control-label">日期</label>
+          <div class="input-group date form_date datecon" data-date-format="yyyy.MM.dd" data-link-field="dtp_input" data-link-format="yyyy.MM.dd">
+              <!-- 时间输入 -->
+              <input class="form-control datebox" size="18" type="text" value="" placeholder="请选择时期">
+              <span class="input-group-addon cal ic_ti">
+                <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+          </div>
+          <!-- 选中框 -->
+          <input type="hidden" id="dtp_input" value="" /><br/>
+        </div>
+        <!-- 时间段筛选 -->
+        <div class="form-group">
+          <label for="dtp_input" class="col-md-1 control-label">时段</label>
+          <!-- 时间 段一 -->
+          <div class="input-group date form_time time_1" data-date-format="HH:ii p" data-link-field="dtp_input1" data-link-format="HH:ii p">
+              <!-- 时间 输入 -->
+              <input class="form-control" size="5" type="text" value="">
+              <span class="input-group-addon ic_ti">
+                <span class="glyphicon glyphicon-time"></span>
+              </span>
+          </div>
+          <!-- 选中框 -->
+          <input type="hidden" id="dtp_input1" value="" /><br/>
+          <div class="ic_hen">--</div>
+          <!-- 时间 段二 -->
+          <div class="input-group date form_time time_2" data-date-format="HH:ii p" data-link-field="dtp_input1" data-link-format="HH:ii p">
+            <!-- 时间 输入 -->
+            <input class="form-control" size="5" type="text" value="">
+            <span class="input-group-addon ic_ti">
+              <span class="glyphicon glyphicon-time"></span>
+            </span>
+          </div>
+          <!-- 选中框 -->
+          <input type="hidden" id="dtp_input1" value="" /><br/>
+        </div>
+        <div class="button-group">
+          <button type="submit" class="btn btn-default showhis">确定</button>
+          <button type="reset" class="btn btn-default">重置</button>
+        </div>
+      </div>
+    </form>
 	</div>
 <script src="js/hisRecord.js"></script>
 </body>

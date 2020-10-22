@@ -1,0 +1,85 @@
+.panel {
+  position: fixed;
+  width: 300px;
+  height: 250px;
+  opacity: 0.95;
+  right: 10px;
+  top: 10px;
+}
+
+.fontbox {
+  position: relative;
+  top: 10px;
+  left: 50%;
+  transform: translate(-14%);
+  font-size: 15px;
+}
+
+.input-group {
+  margin: 20px;
+  font-size: 15px;
+}
+
+.form-group {
+  height: 40px;
+  position: relative;
+}
+.control-label {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #555;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 20px;
+  width: 55px;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.datecon {
+  width: 218px;
+}
+.datebox {
+  background-color: #fff;
+}
+.cal {
+  border: none;
+  background-color: #fff;
+}
+
+.hour_1 {
+  width: 50px;
+}
+
+.time_1 {
+  width: 100px;
+  margin: 0;
+}
+.ic_hen {
+  position: absolute;
+  bottom: 16px;
+  left: 173px;
+}
+.time_2 {
+  width: 100px;
+  position: absolute;
+  bottom: 7px;
+  right: 5px;
+  margin: 0;
+}
+.ic_ti {
+  visibility: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.button-group {
+  position: relative;
+  left: 23%;
+}
+.button-group button {
+  margin: 0 10px;
+}

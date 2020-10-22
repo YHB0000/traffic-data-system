@@ -28,10 +28,10 @@ $(function(){
             $('.nav-item.nav-show').removeClass('nav-show');
             $('.nav-item').children('ul').removeAttr('style');
             $('.nav').addClass('nav-mini');
-            $('.container').addClass('container-mini');
+            $('.content').addClass('content-mini');
         }else{
             $('.nav').removeClass('nav-mini');
-            $('.container').removeClass('container-mini');
+            $('.content').removeClass('content-mini');
         }
     });
 });
